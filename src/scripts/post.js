@@ -8,7 +8,8 @@ const
     fname = {
         date: new Date().getTime(),
         author:'barbatchov',
-        title:''
+        title:'',
+        locale:'en'
     },
     argFn = {
         help() {
@@ -49,7 +50,7 @@ function dash(str) {
     .replace(/[$]+/g, 's').replace(/[%]+/g, 'pct').replace(/\W+/g, '_')
 }
 
-let newFileName = [fname.date, dash(fname.author), dash(fname.title)].join('-') + '.md',
+let newFileName = [fname.date, dash(fname.author), dash(fname.title), fname.locale].join('-') + '.md',
     textBase = [
         '# ' + fname.title,
     ].join('\n');
