@@ -1,1 +1,18 @@
-<p>sidebar works!</p>
+<mat-sidenav-container>
+    <mat-sidenav mode="side" opened>
+
+        <mat-toolbar color="primary">
+            <mat-toolbar-row>
+                <span>Teste</span>
+                <button mat-icon-button (click)="toggleSidenav.emit()">
+                    <mat-icon>close</mat-icon>
+                </button>
+            </mat-toolbar-row>
+        </mat-toolbar>
+
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <app-toolbar></app-toolbar>
+        
+    </mat-sidenav-content>
+</mat-sidenav-container>
